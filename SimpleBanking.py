@@ -3,13 +3,8 @@
 
 # In[ ]:
 
-
-
-
-
-
 class Account:
-    def __init__(self,owner,balance):
+    def __init__(self,owner,balance=0):
         self.owner=owner
         self.balance=balance
     def __str__(self):
@@ -28,39 +23,22 @@ class Account:
             print(f"Do not have enough balance.Can only withdraw ${self.balance}")
             
 
-
 # In[76]:
-
-
 acct1 = Account('Jose',100)
 
 
 # In[77]:
-
-
 print(acct1)
 
 
 # In[78]:
-
-
 acct1.deposit(10)
 
 
 # In[79]:
-
-
 acct1.withdraw(60)
 
 
 # In[80]:
-
-
 acct1.withdraw(60)
-
-
-# In[ ]:
-
-
-
 
