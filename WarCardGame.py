@@ -131,7 +131,7 @@ while game_on:
     at_war=True
         
     while at_war:
-            
+          #When rank of player one's card is higher,  
         if (one_ontable[-1].value) > (two_ontable[-1].value) : 
             player_one.add_cards(one_ontable)
             player_one.add_cards(two_ontable)
@@ -141,7 +141,8 @@ while game_on:
                 random.shuffle(player_one.all_cards)
                 print(f"{player_one.name} shuffles")
             at_war=False
-                
+            
+           #When rank of player two's card is higher,      
         elif  one_ontable[-1].value < two_ontable[-1].value:
             player_two.add_cards(one_ontable)
             player_two.add_cards(two_ontable)
@@ -153,9 +154,10 @@ while game_on:
                 
             at_war=False
                 
-        else:
+        else: #When both the cards have same rank, 
+            
             print("!!WAR!!")
-            if len(player_one.all_cards) <5 :
+            if len(player_one.all_cards) <5 : 
                 print(f"{player_one.name} don't have enough cards.\n{player_two.name} WINS!!!")
                 game_on=False
                 break
