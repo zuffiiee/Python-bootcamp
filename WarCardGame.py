@@ -103,8 +103,9 @@ rounds = 0
 while game_on:
 
     rounds+=1
-    if rounds>300:
+    if rounds>400:
         print("Game is getting boring...")
+        game_on=False
         break
 
     print(f"\n***Round {rounds}***")
@@ -119,11 +120,11 @@ while game_on:
         break
         
     #new round
-    one_ontable=[]
+    one_ontable=[]    #player one's cards on table
     one_ontable.append(player_one.remove_card())
     print(f"{player_one.name[0]}: {one_ontable[-1]}")
         
-    two_ontable=[]
+    two_ontable=[]     #player two's cards on table
     two_ontable.append(player_two.remove_card())
     print(f"{player_two.name[0]}: {two_ontable[-1]}")
         
